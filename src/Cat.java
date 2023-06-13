@@ -4,6 +4,7 @@ public class Cat extends Animal {
     }
 
     public Cat(Integer id, String name, String colorHair, String typeAnimal) {
+
         super(id, name, colorHair, typeAnimal);
     }
 

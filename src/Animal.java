@@ -55,17 +55,25 @@ public class Animal {
     public void inputAnimal() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("nhap ma dong vat : ");
-        this.id = scanner.nextInt();
+        do {
+            System.out.print("Nhập id động vât : ");
+
+            while (!scanner.hasNextInt()) {
+                System.out.println("Đây không phải là số. Vui lòng nhập lại.");
+                scanner.next();
+            }
+
+            this.id = scanner.nextInt();
+        } while (this.id < 0);
         scanner.nextLine();
 
-        System.out.println("nhap ten dong vat : ");
+        System.out.println("nhập tên động vật : ");
         this.name = scanner.nextLine();
 
-        System.out.println("nhap mau dong vat : ");
+        System.out.println("nhập màu động vật : ");
         this.colorHair = scanner.nextLine();
 
-        System.out.println("nhap loai dong vat : ");
+        System.out.println("nhập loại động vật : ");
         this.typeAnimal = scanner.nextLine();
     }
 
